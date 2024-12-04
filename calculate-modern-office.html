@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select BHK Type</title>
+    <link rel="stylesheet" href="stylesforcmo.css">
+</head>
+<body>
+    <!-- Header Section (same as main page) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">Future<span>Build</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Form Section for BHK Type Selection -->
+    <section class="bhk-selection">
+        <div class="container">
+            <h2>Select your BHK type</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="bhk">1 BHK</label>
+                    <input type="radio" id="1bhk" name="bhk" value="1BHK">
+                </div>
+
+                <div class="form-group">
+                    <label for="2bhk">2 BHK</label>
+                    <input type="radio" id="2bhk" name="bhk" value="2BHK">
+                    <div class="sub-options">
+                        <label for="small-2bhk">Small (Below 800 sq ft)</label>
+                        <input type="radio" id="small-2bhk" name="size2bhk" value="small">
+                        <label for="large-2bhk">Large (Above 800 sq ft)</label>
+                        <input type="radio" id="large-2bhk" name="size2bhk" value="large">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="3bhk">3 BHK</label>
+                    <input type="radio" id="3bhk" name="bhk" value="3BHK">
+                    <div class="sub-options">
+                        <label for="small-3bhk">Small (Below 1200 sq ft)</label>
+                        <input type="radio" id="small-3bhk" name="size3bhk" value="small">
+                        <label for="large-3bhk">Large (Above 1200 sq ft)</label>
+                        <input type="radio" id="large-3bhk" name="size3bhk" value="large">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="4bhk">4 BHK</label>
+                    <input type="radio" id="4bhk" name="bhk" value="4BHK">
+                    <div class="sub-options">
+                        <label for="small-4bhk">Small (Below 1800 sq ft)</label>
+                        <input type="radio" id="small-4bhk" name="size4bhk" value="small">
+                        <label for="large-4bhk">Large (Above 1800 sq ft)</label>
+                        <input type="radio" id="large-4bhk" name="size4bhk" value="large">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="5bhk">5 BHK+</label>
+                    <input type="radio" id="5bhk" name="bhk" value="5BHK+">
+                </div>
+
+                <!-- Back and Next Buttons -->
+                <div class="buttons">
+                    <a href="index.html" class="btn back-btn">Back</a>
+                    <button type="submit" class="btn next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FutureBuild. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

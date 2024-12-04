@@ -1,0 +1,364 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f0;
+    color: #222;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 15px 0;
+    color: #fff;
+    transition: top 0.3s ease-in-out;
+}
+
+.main-header.hidden {
+    top: -80px;
+}
+
+.main-header .logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.main-header .logo span {
+    color: #00bfa5;
+}
+
+.main-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-header nav ul li a:hover {
+    color: #00bfa5;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 25px;
+    background: #00bfa5;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #007f74;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.portfolio .section-desc {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 191, 165, 0.4);
+}
+
+.card a {
+    text-decoration: none;
+    color: #222;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 15px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #777;
+    margin: 0 15px 15px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+    background: #00bfa5;
+    color: #fff;
+    text-align: center;
+}
+
+.contact .contact-options {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact form {
+    max-width: 400px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact form button {
+    width: 100%;
+    padding: 12px;
+    background: #007f74;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background: #00bfa5;
+}
+
+.call-us {
+    font-size: 1.2rem;
+    margin-top: 20px; /* Added margin to give space above */
+}
+
+.call-us p {
+    margin-bottom: 20px; /* Added space below the text */
+}
+
+.call-us a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background: #007f74;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.call-us a:hover {
+    background: #00bfa5;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .portfolio .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .contact-options {
+        flex-direction: column;
+    }
+    /* Hide project name in header when on project page */
+body.project-page .main-header .logo span {
+    display: none;
+}
+
+
+}
+/* Tab Section */
+.tabs {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.tab {
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tab input[type="radio"] {
+    display: none;
+}
+
+/*button in the tabs*/
+
+.tab label {
+    display: block;
+    background: #007f74;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab input:checked + label + .tab-content {
+    display: block;
+}
+
+.calculate-btn {
+    padding: 10px 20px;
+    background-color: #00bfa5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+.calculate-btn:hover {
+    background-color: #007f74;
+}
+
+/* Styling for the "Home Design" section */
+.home-design {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.home-design h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.home-design p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.home-design .btn {
+    padding: 12px 30px;
+    background: #00bfa5;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.home-design .btn:hover {
+    background: #007f74;
+}
+
+
+/*_________________________________________________________________________________________________________________________________________________________________________________________________*/
+
+/*other pages styling*/
+/* Interior Estimator Page Styles */
